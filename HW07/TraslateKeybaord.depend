@@ -1,10 +1,8 @@
 # depslib dependency file v1.0
-1603723150 source:d:\대학\수업\컴퓨터그래픽스\hw05\ballisticcalc\main.cpp
+1604558705 source:d:\대학\수업\컴퓨터그래픽스\실습\08\traslatekeybaord\main.cpp
 	<GL/glut.h>
-	<cstdlib>
-	<cmath>
-	<vector>
-	<cfloat>
+	<stdlib.h>
+	<math.h>
 	<iostream>
 
 881779280 c:\program files (x86)\codeblocks\mingw\include\gl\glut.h
@@ -225,90 +223,9 @@
 1341006774 c:\program files (x86)\codeblocks\mingw\include\math.h
 	<_mingw.h>
 
-1604472548 source:d:\대학\수업\컴퓨터그래픽스\hw06\ballisticcalc\main.cpp
+1605125361 source:d:\대학\수업\컴퓨터그래픽스\computergraphics\hw07\main.cpp
 	<GL/glut.h>
 	<cstdlib>
 	<cmath>
-	<cfloat>
 	<iostream>
-	"Vec.hpp"
-	"Transform.hpp"
-	"Game.hpp"
-	"Utils.hpp"
-
-1604468036 d:\대학\수업\컴퓨터그래픽스\hw06\ballisticcalc\vec.hpp
-
-1604470503 d:\대학\수업\컴퓨터그래픽스\hw06\ballisticcalc\matrix.hpp
-	"Vec.hpp"
-
-1604472095 d:\대학\수업\컴퓨터그래픽스\hw06\ballisticcalc\transform.hpp
-	"Matrix.hpp"
-	<vector>
-
-1604472526 d:\대학\수업\컴퓨터그래픽스\hw06\ballisticcalc\game.hpp
-	<vector>
-	"Vec.hpp"
-	"Matrix.hpp"
-	"Transform.hpp"
-
-1604470586 d:\대학\수업\컴퓨터그래픽스\hw06\ballisticcalc\utils.hpp
-	"Game.hpp"
-
-1604485924 source:d:\대학\수업\컴퓨터그래픽스\computergraphics\hw6\main.cpp
-	<GL/glut.h>
-	<cstdlib>
-	<cmath>
-	<cfloat>
-	<iostream>
-	"Vec.hpp"
-	"Transform.hpp"
-	"Game.hpp"
-	"Utils.hpp"
-
-1604468036 d:\대학\수업\컴퓨터그래픽스\computergraphics\hw6\vec.hpp
-
-1604472095 d:\대학\수업\컴퓨터그래픽스\computergraphics\hw6\transform.hpp
-	"Matrix.hpp"
-	<vector>
-
-1604470503 d:\대학\수업\컴퓨터그래픽스\computergraphics\hw6\matrix.hpp
-	"Vec.hpp"
-
-1604472526 d:\대학\수업\컴퓨터그래픽스\computergraphics\hw6\game.hpp
-	<vector>
-	"Vec.hpp"
-	"Matrix.hpp"
-	"Transform.hpp"
-
-1604470586 d:\대학\수업\컴퓨터그래픽스\computergraphics\hw6\utils.hpp
-	"Game.hpp"
-
-1604489572 source:d:\대학\수업\컴퓨터그래픽스\computergraphics\hw06\main.cpp
-	<GL/glut.h>
-	<cstdlib>
-	<cmath>
-	<cfloat>
-	<iostream>
-	"Vec.hpp"
-	"Transform.hpp"
-	"Game.hpp"
-	"Utils.hpp"
-
-1604468036 d:\대학\수업\컴퓨터그래픽스\computergraphics\hw06\vec.hpp
-
-1604472095 d:\대학\수업\컴퓨터그래픽스\computergraphics\hw06\transform.hpp
-	"Matrix.hpp"
-	<vector>
-
-1604470503 d:\대학\수업\컴퓨터그래픽스\computergraphics\hw06\matrix.hpp
-	"Vec.hpp"
-
-1604472526 d:\대학\수업\컴퓨터그래픽스\computergraphics\hw06\game.hpp
-	<vector>
-	"Vec.hpp"
-	"Matrix.hpp"
-	"Transform.hpp"
-
-1604470586 d:\대학\수업\컴퓨터그래픽스\computergraphics\hw06\utils.hpp
-	"Game.hpp"
 

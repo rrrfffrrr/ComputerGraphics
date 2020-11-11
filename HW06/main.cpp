@@ -83,7 +83,7 @@ void BuildTrail(float speed, float angle, float scale_per_time, float rotation_p
 
     /// Create mesh data
     MeshFactory factory(MESH_SIZE);
-    factory.SetMesh(&projectile.Mesh, MeshFactory::MESH_BOX);
+    factory.SetMesh(&projectile.Mesh, MeshFactory::MESH_ICOSPHERE);
 
     float time = 0;
 
@@ -97,7 +97,7 @@ void BuildTrail(float speed, float angle, float scale_per_time, float rotation_p
         s = 1 + scale_per_time * time;
         rot = rotation_per_time * time;
 
-        Matrix4x4::BuildScaleMatrix(s, s, s, &temporal);           projectile.Transform.Push(&temporal);
+        Matrix4x4::BuildScaleMatrix(s, s * 0.7, s * 0.4, &temporal);           projectile.Transform.Push(&temporal);
         Matrix4x4::BuildRotationXMatrix(rot, &temporal);         projectile.Transform.Push(&temporal);
         Matrix4x4::BuildRotationYMatrix(-rot, &temporal);         projectile.Transform.Push(&temporal);
         Matrix4x4::BuildRotationZMatrix(rot, &temporal);         projectile.Transform.Push(&temporal);

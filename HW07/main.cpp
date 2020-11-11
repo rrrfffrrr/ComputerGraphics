@@ -133,15 +133,18 @@ namespace Utils {
 }
 
 class Transform {
-public:
-    Matrix4x4::Type WorldMatrix;
+private:
+    Matrix4x4::Type CompositeMatrix;
 
 public:
     Transform() {
-        Matrix4x4::SetIdentity(WorldMatrix);
+        Matrix4x4::SetIdentity(CompositeMatrix);
     }
 
 public:
+    void SetIdentity() {
+        Matrix4x4::SetIdentity(CompositeMatrix);
+    }
     void Translate(GLfloat tx, GLfloat ty, GLfloat tz) {
         Matrix4x4::Type temp;
         Matrix4x4::SetIdentity(temp);
@@ -150,7 +153,7 @@ public:
         temp[1][3] = ty;
         temp[2][3] = tz;
 
-        Matrix4x4::MultiplySafe(temp, WorldMatrix, WorldMatrix);
+        Matrix4x4::MultiplySafe(temp, CompositeMatrix, CompositeMatrix);
     }
     void Scale(GLfloat sx, GLfloat sy, GLfloat sz) {
         Matrix4x4::Type temp;
@@ -160,7 +163,7 @@ public:
         temp[1][1] = sy;
         temp[2][2] = sz;
 
-        Matrix4x4::MultiplySafe(temp, WorldMatrix, WorldMatrix);
+        Matrix4x4::MultiplySafe(temp, CompositeMatrix, CompositeMatrix);
     }
     void RotateX(GLfloat radian) {
         Matrix4x4::Type temp;
@@ -171,7 +174,7 @@ public:
         temp[2][1] = sin(radian);
         temp[2][2] = cos(radian);
 
-        Matrix4x4::MultiplySafe(temp, WorldMatrix, WorldMatrix);
+        Matrix4x4::MultiplySafe(temp, CompositeMatrix, CompositeMatrix);
     }
     void RotateXDegree(GLfloat degree) { RotateX(degree * degtorad); }
     void RotateY(GLfloat radian) {
@@ -183,7 +186,7 @@ public:
         temp[2][0] = -sin(radian);
         temp[2][2] = cos(radian);
 
-        Matrix4x4::MultiplySafe(temp, WorldMatrix, WorldMatrix);
+        Matrix4x4::MultiplySafe(temp, CompositeMatrix, CompositeMatrix);
     }
     void RotateYDegree(GLfloat degree) { RotateY(degree * degtorad); }
     void RotateZ(GLfloat radian) {
@@ -195,11 +198,11 @@ public:
         temp[1][0] = sin(radian);
         temp[1][1] = cos(radian);
 
-        Matrix4x4::MultiplySafe(temp, WorldMatrix, WorldMatrix);
+        Matrix4x4::MultiplySafe(temp, CompositeMatrix, CompositeMatrix);
     }
     void RotateZDegree(GLfloat degree) { RotateZ(degree * degtorad); }
     void TransformPoint(Vec3::Type input, Vec3::Type output) {
-        Matrix4x4::MultiplySafe(WorldMatrix, input, output);
+        Matrix4x4::MultiplySafe(CompositeMatrix, input, output);
     }
 };
 class CEntity {
@@ -207,7 +210,7 @@ public:
     virtual void Display() {};
 };
 class CBox : public CEntity {
-public:
+private:
     Vec3::Type Origin;
     Utils::Primitives::Box Vertices;
     Utils::Primitives::BoxColor Colors;
@@ -247,7 +250,7 @@ public:
             Transform.TransformPoint(Vertices[i], Vertices[i]);
         }
         Transform.TransformPoint(Origin, Origin);
-        Matrix4x4::SetIdentity(Transform.WorldMatrix);
+        Transform.SetIdentity();
     }
     void Display() {
         Utils::DisplayCube(Vertices, Colors);

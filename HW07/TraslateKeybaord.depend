@@ -223,7 +223,7 @@
 1341006774 c:\program files (x86)\codeblocks\mingw\include\math.h
 	<_mingw.h>
 
-1605125361 source:d:\대학\수업\컴퓨터그래픽스\computergraphics\hw07\main.cpp
+1605125947 source:d:\대학\수업\컴퓨터그래픽스\computergraphics\hw07\main.cpp
 	<GL/glut.h>
 	<cstdlib>
 	<cmath>

@@ -413,7 +413,7 @@ void Init()
     glColor3f(1.0,1.0,0.0);
     glEnable(GL_DEPTH_TEST);
 
-    box.Transform.Translate(20, -18, 25);
+    box.Translate(20, -18, 25);
     box.ApplyTransform();
 }
 

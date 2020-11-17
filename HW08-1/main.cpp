@@ -16,8 +16,8 @@
 
 using namespace std;
 
-GLdouble degtorad = M_PI/180.0;
-GLdouble radtodeg = 180.0/M_PI;
+const GLdouble degtorad = M_PI/180.0;
+const GLdouble radtodeg = 180.0/M_PI;
 
 namespace Vec3 {
     typedef GLfloat Type [3];
